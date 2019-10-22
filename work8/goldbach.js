@@ -1,31 +1,31 @@
-function goldbach(){
-    let sum = parseInt(document.getElementById('odd').value)
-    var str = []
-    if(sum <= 2 || (sum % 2 != 0) )
-    {
-        alert('请输入一个大于2的偶数！')
-        return false
+function goldbach() {
+    var value = document.getElementById('odd').value
+    if(value%2!==0){
+        alert("请输入偶数")
     }
-    for(let i = 2; i <= sum / 2; ++i)
-    {
-        for(j = 2; j < i; ++j)
-        {
-            if(i % j == 0){
-                break;
-            }
-        }
-        if(j == i){ // i是素数
-            var sub = sum - i;
-            for(k = 2; k < sub; ++k)
-            {
-                if(sub % k == 0){
-                    break;
-                }
-            }
-            if(k == sub){
-                str += sum + "可以被拆分为两个素数" + i + "和" + sub + "的和\n"
-            }
+    let goldbach = document.getElementById('goldbach')
+    var arr =[]
+    var a = 0;
+    for(var i=2; i<=value; i++){
+        a = 0
+        for(var j=2; j<i; j++){
+            if(i%j==0){
+                a++
         }
     }
-    document.getElementById('goldbach').innerText = str
+    if(a==0){
+         arr.push(i)
+        }
+    }
+    var str = ''
+    console.log(value)
+    for(let i=0;i<(arr.length)/2;i++){
+       for(let j=0;j<arr.length;j++){
+           if((arr[i]+arr[j])===Number(value)){
+               str += '<div>'+value+"可以拆分为两个质数"+arr[i]+"与"+arr[j]+"的和"+ '</div>'
+               console.log(value+"可以拆分为两个质数"+arr[i]+"与"+arr[j]+"的和")
+           }
+       }
+    }
+goldbach.innerHTML = str
 }
