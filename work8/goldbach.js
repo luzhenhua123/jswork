@@ -1,7 +1,7 @@
 function goldbach() {
     var value = document.getElementById('odd').value
     if(value%2!==0){
-        alert("请输入偶数")
+        alert("请输入大于2偶数")
     }
     let goldbach = document.getElementById('goldbach')
     var arr =[]
