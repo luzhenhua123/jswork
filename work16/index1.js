@@ -31,3 +31,4 @@ obj.onclick=function(){
     var top = parseInt(Math.random()*window.innerHeight)
     animate(obj, { 'left': left, 'top': top })
 }
+//s
