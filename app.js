@@ -32,6 +32,7 @@ app.post('/formBuilder',function (req,res) {
 let ajaxData = []
 let count =0
 app.post('/ajax',function (req,res) {
+    console.log(1231)
     let sno = req.body.sno
     let name = req.body.name
     let content = req.body.content
@@ -49,6 +50,7 @@ app.post('/ajax',function (req,res) {
     res.json(ajaxData)
 })
 app.get('/ajax',function (req,res) {
+    console.log(123123)
     let page = req.query.page?Math.max(req.query.page,1):1
     let size = 5
     let maxpage = Math.ceil(ajaxData.length/size)
