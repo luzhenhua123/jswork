@@ -48,7 +48,7 @@ function init(rowCount,colCount,minLandMineCount,maxLandMineCount) {
             xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
             xmlhttp.send('name=' + name + '&score=' + score + '&order=1')
         } else {
-            alert('扫雷失败!')
+            alert('扫雷失败!') //不要想着copy
         }
     }
         jms.landMineCallBack =function (count) {

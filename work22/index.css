@@ -45,8 +45,8 @@
     background-image: url(./flag.png);
     background-position: center;
     background-repeat: no-repeat;
-}
-.main:after{
+}   /* 07190721 */
+.main:after{ 
     clear: both;
     display: block;
     content: "";
